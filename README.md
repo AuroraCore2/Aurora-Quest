@@ -3,6 +3,10 @@
 An intelligent study companion that helps students plan, learn, and revise efficiently using AI, RAG search, voice tutoring, adaptive quizzes, and real-time progress tracking.
 Built with FastAPI, Next.js, Agora RTC, OpenAI, and Pinecone.
 
+<img width="1912" height="930" alt="image" src="https://github.com/user-attachments/assets/128ce0a2-6d06-4943-adf5-a2544c4625c7" />
+
+
+
 🚀 Features
 Smart Study Plan Generator
 
@@ -146,6 +150,4 @@ Weak-topic recommendations
 Flashcards
 
 Learning analytics
-
-<img width="1912" height="930" alt="image" src="https://github.com/user-attachments/assets/128ce0a2-6d06-4943-adf5-a2544c4625c7" />
 
