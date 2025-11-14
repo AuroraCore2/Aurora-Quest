@@ -147,4 +147,5 @@ Flashcards
 
 Learning analytics
 
-Mobile app
+<img width="1912" height="930" alt="image" src="https://github.com/user-attachments/assets/128ce0a2-6d06-4943-adf5-a2544c4625c7" />
+
