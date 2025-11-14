@@ -1,48 +1,44 @@
 📚 AI-Powered Study Planner
 
-An intelligent study companion that helps students plan, learn, and revise efficiently using AI, RAG-based search, voice tutoring, real-time progress tracking, and adaptive quizzes.
-Built with FastAPI + Next.js, Agora RTC, OpenAI, and Pinecone.
+An intelligent study companion that helps students plan, learn, and revise efficiently using AI, RAG search, voice tutoring, adaptive quizzes, and real-time progress tracking.
+Built with FastAPI, Next.js, Agora RTC, OpenAI, and Pinecone.
 
 🚀 Features
-🔹 Smart Study Plan Generator
+Smart Study Plan Generator
 
-Creates a personalized plan based on syllabus, exam date, and daily study hours
+Generates a personalized study plan based on syllabus and exam dates
 
-Updates automatically based on completion
+Auto-updates progress when tasks are completed
 
-🔹 PDF Knowledge Base (RAG)
+PDF Knowledge Base (RAG)
 
-Upload PDFs → processed into embeddings
+Upload PDFs and convert them into embeddings
 
-Pinecone vector search for accurate, context-aware answers
+Pinecone vector search provides accurate, context-aware answers
 
-AI chat trained on the user's uploaded notes
+AI Voice Tutor (Agora + GPT)
 
-🔹 AI Voice Tutor (Agora + GPT)
+Real-time voice tutoring
 
-Real-time AI voice-based tutoring
+Interactive concept explanations
 
-Low-latency WebRTC
+Low latency using Agora
 
-Perfect for hands-free learning
+Adaptive Quiz Generator
 
-🔹 Adaptive Quiz Generator
+Automatically generates MCQs and short questions
 
-Auto-generates MCQs and short questions
+Adjusts difficulty dynamically
 
-Difficulty adjusts to user performance
-
-🔹 Gamification
+Gamification
 
 XP, streaks, badges
 
-Weekly/monthly progress dashboard
+Weekly and monthly progress analytics
 
-Motivates consistent learning
+Real-Time Sync
 
-🔹 Real-Time Sync
-
-WebSockets for instant updates of tasks, progress, XP, and quizzes
+WebSockets for instant updates for tasks, progress, XP, quizzes
 
 🏗️ Tech Stack
 Frontend
@@ -51,13 +47,13 @@ Next.js
 
 TailwindCSS
 
-Zustand / Redux
+Zustand or Redux
 
 Backend
 
 FastAPI
 
-REST API + WebSockets
+REST APIs and WebSockets
 
 Pydantic models
 
@@ -67,127 +63,88 @@ OpenAI
 
 Pinecone Vector DB
 
-PostgreSQL / pgvector
+PostgreSQL or pgvector
 
 Voice
 
 Agora RTC
 
 📁 Folder Structure
-/frontend
-   /components
-   /pages
-   /utils
 
-/backend
-   /routes
-   /models
-   /services
-   /database
-   main.py
+Frontend, backend, and ML modules are organized into component-based folders such as components, pages, routes, models, services, and pdf/quiz/voice utilities.
 
-/ml
-   /pdf_processing
-   /quiz_generator
-   /voice_tutor
+🔧 Setup Overview
 
-🔧 Setup Instructions
-Backend Setup
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
+Install dependencies for backend and frontend
 
-Frontend Setup
-cd frontend
-npm install
-npm run dev
+Run FastAPI server
 
-Environment Variables
+Run Next.js development server
 
-Create a .env file with:
-
-OPENAI_API_KEY=your_key
-PINECONE_API_KEY=your_key
-AGORA_APP_ID=your_id
-JWT_SECRET=your_secret
-DATABASE_URL=postgres_url
+Add environment variables like OPENAI keys, Pinecone keys, Agora ID, JWT secret, and DB URL
 
 🔐 Authentication (JWT)
 
-We use JWT Access + Refresh tokens.
-When the user logs in:
+Uses JWT access and refresh tokens
 
-Server generates:
+Access tokens secure authorized endpoints
 
-access_token
-refresh_token
-
-
-Access token is used for short-term authorized requests
-
-Refresh token is used to generate new access tokens
+Refresh tokens generate new access tokens when expired
 
 📊 Progress, XP & Streak Logic
-Progress Formula
-progress = (completed_tasks / total_tasks) * 100
+Progress
 
-XP Rewards
-+10 XP  → Task completed
-+20 XP  → Quiz completed
-+30 XP  → Voice tutoring session
-+50 XP  → Daily streak bonus
+Calculated as: completed tasks divided by total tasks multiplied by 100.
 
-Streak Formula
-If user completes ≥ 1 task today:
-      streak += 1
-Else:
-      streak = 0
+XP System
+
+Completing tasks, quizzes, and voice sessions gives XP
+
+Daily streaks give bonus XP
+
+Streak Logic
+
+Streak increases when at least one task is completed daily.
+Resets when the user skips a day.
 
 🧠 RAG (PDF → Embeddings → Vector Search)
-PDF Processing Steps
-1. Extract text from PDF
-2. Split text into chunks
-3. Generate embeddings using OpenAI
-4. Store embeddings in Pinecone
-5. Query Pinecone on user questions
+How It Works
 
-Query Pipeline
-User question → Embedding → Pinecone search → Relevant chunks → GPT Answer
+PDFs are processed, text extracted, chunked, converted to embeddings
+
+Embeddings stored in Pinecone
+
+When the user asks a question, the system searches relevant chunks and GPT generates the answer
 
 🎤 Voice Tutor (Agora + OpenAI)
-Real-Time Voice Flow
-Agora Audio Stream → FastAPI WebSocket → Transcription → GPT Response → Text-to-Speech → User
+Flow
 
-🛠 API Endpoints (Examples)
-Fetch study plan
-GET /plan
+User speaks → Agora audio stream
 
-Update task status
-POST /task/update
+Server transcribes
 
-Get AI chat response
-POST /ai/chat
+GPT generates answer
 
-Generate quiz
-POST /quiz/generate
+AI responds via voice
+
+🛠 API Endpoints (High-Level)
+
+Get study plan
+
+Update task
+
+AI chat
+
+Quiz generation
 
 🎯 Future Improvements
 
-Add spaced repetition
+Spaced repetition
 
-Recommendations based on weak subjects
+Weak-topic recommendations
 
-Long-term learning analytics
+Flashcards
 
-AI-generated flashcards
+Learning analytics
 
-Mobile app version
-
-🤝 Contributing
-
-Pull requests are welcome!
-Open an issue for bugs, features, or enhancements.
-
-⭐ Support
-
-If you like this project, please ⭐ the repository!
+Mobile app
