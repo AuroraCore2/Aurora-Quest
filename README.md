@@ -1,4 +1,4 @@
-### 📚 AI-Powered Study Planner
+## 📚 AI-Powered Study Planner
 
 An intelligent study companion that helps students plan, learn, and revise efficiently using AI, RAG search, voice tutoring, adaptive quizzes, and real-time progress tracking.
 Built with FastAPI, Next.js, Agora RTC, OpenAI, and Pinecone.
@@ -7,7 +7,7 @@ Built with FastAPI, Next.js, Agora RTC, OpenAI, and Pinecone.
 
 
 
-## 🚀 Features
+### 🚀 Features
 - Smart Study Plan Generator<br>
 - Generates a personalized study plan based on syllabus and exam dates<br>
 - Auto-updates progress when tasks are completed<br>
@@ -27,110 +27,76 @@ Built with FastAPI, Next.js, Agora RTC, OpenAI, and Pinecone.
 - Real-Time Sync<br>
 - WebSockets for instant updates for tasks, progress, XP, quizzes
 
-🏗️ Tech Stack
-Frontend
+### 🏗️ Tech Stack
+- Frontend<br>
+- Next.js<br>
+- TailwindCSS<br>
+- Zustand or Redux<br>
+- Backend<br>
+- FastAPI<br>
+- REST APIs and WebSockets<br>
+- Pydantic models<br>
+- AI + Storage<br>
+- OpenAI<br>
+- Pinecone Vector DB<br>
+- PostgreSQL or pgvector<br>
+- Voice<br>
+- Agora RTC
 
-Next.js
-
-TailwindCSS
-
-Zustand or Redux
-
-Backend
-
-FastAPI
-
-REST APIs and WebSockets
-
-Pydantic models
-
-AI + Storage
-
-OpenAI
-
-Pinecone Vector DB
-
-PostgreSQL or pgvector
-
-Voice
-
-Agora RTC
-
-📁 Folder Structure
+### 📁 Folder Structure
 
 Frontend, backend, and ML modules are organized into component-based folders such as components, pages, routes, models, services, and pdf/quiz/voice utilities.
 
-🔧 Setup Overview
+### 🔧 Setup Overview
 
-Install dependencies for backend and frontend
+- Install dependencies for backend and frontend<br>
+- Run FastAPI server<br>
+- Run Next.js development server<br>
+- Add environment variables like OPENAI keys, Pinecone keys, Agora ID, JWT secret, and DB URL
 
-Run FastAPI server
+### 🔐 Authentication (JWT)
 
-Run Next.js development server
+- Uses JWT access and refresh tokens<br>
+- Access tokens secure authorized endpoints<br>
+- Refresh tokens generate new access tokens when expired
 
-Add environment variables like OPENAI keys, Pinecone keys, Agora ID, JWT secret, and DB URL
+### 📊 Progress, XP & Streak Logic
 
-🔐 Authentication (JWT)
+- Progress<br>
+- Calculated as: completed tasks divided by total tasks multiplied by 100.<br>
+- XP System<br>
+- Completing tasks, quizzes, and voice sessions gives XP<br>
+- Daily streaks give bonus XP<br>
+- Streak Logic<br>
+- Streak increases when at least one task is completed daily.<br>
+- Resets when the user skips a day.<br>
 
-Uses JWT access and refresh tokens
+### 🧠 RAG (PDF → Embeddings → Vector Search)
 
-Access tokens secure authorized endpoints
+- How It Works<br>
+- PDFs are processed, text extracted, chunked, converted to embeddings<br>
+- Embeddings stored in Pinecone<br>
+- When the user asks a question, the system searches relevant chunks and GPT generates the answer
 
-Refresh tokens generate new access tokens when expired
+### 🎤 Voice Tutor (Agora + OpenAI)
 
-📊 Progress, XP & Streak Logic
-Progress
+Flow<br>
+- User speaks → Agora audio stream<br>
+- Server transcribes<br>
+- GPT generates answer<br>
+- AI responds via voice<br>
+  
+### 🛠 API Endpoints (High-Level)
 
-Calculated as: completed tasks divided by total tasks multiplied by 100.
+- Get study plan<br>
+- Update task<br>
+- AI chat<br>
+- Quiz generation
 
-XP System
+### 🎯 Future Improvements
 
-Completing tasks, quizzes, and voice sessions gives XP
-
-Daily streaks give bonus XP
-
-Streak Logic
-
-Streak increases when at least one task is completed daily.
-Resets when the user skips a day.
-
-🧠 RAG (PDF → Embeddings → Vector Search)
-How It Works
-
-PDFs are processed, text extracted, chunked, converted to embeddings
-
-Embeddings stored in Pinecone
-
-When the user asks a question, the system searches relevant chunks and GPT generates the answer
-
-🎤 Voice Tutor (Agora + OpenAI)
-Flow
-
-User speaks → Agora audio stream
-
-Server transcribes
-
-GPT generates answer
-
-AI responds via voice
-
-🛠 API Endpoints (High-Level)
-
-Get study plan
-
-Update task
-
-AI chat
-
-Quiz generation
-
-🎯 Future Improvements
-
-Spaced repetition
-
-Weak-topic recommendations
-
-Flashcards
-
-Learning analytics
+- Spaced repetition<br>
+- Weak-topic recommendations<br>
+- Flashcards<br>
+- Learning analytics
 
