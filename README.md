@@ -1,4 +1,4 @@
-📚 AI-Powered Study Planner
+### 📚 AI-Powered Study Planner
 
 An intelligent study companion that helps students plan, learn, and revise efficiently using AI, RAG search, voice tutoring, adaptive quizzes, and real-time progress tracking.
 Built with FastAPI, Next.js, Agora RTC, OpenAI, and Pinecone.
@@ -7,42 +7,25 @@ Built with FastAPI, Next.js, Agora RTC, OpenAI, and Pinecone.
 
 
 
-🚀 Features
-Smart Study Plan Generator
-
-Generates a personalized study plan based on syllabus and exam dates
-
-Auto-updates progress when tasks are completed
-
-PDF Knowledge Base (RAG)
-
-Upload PDFs and convert them into embeddings
-
-Pinecone vector search provides accurate, context-aware answers
-
-AI Voice Tutor (Agora + GPT)
-
-Real-time voice tutoring
-
-Interactive concept explanations
-
-Low latency using Agora
-
-Adaptive Quiz Generator
-
-Automatically generates MCQs and short questions
-
-Adjusts difficulty dynamically
-
-Gamification
-
-XP, streaks, badges
-
-Weekly and monthly progress analytics
-
-Real-Time Sync
-
-WebSockets for instant updates for tasks, progress, XP, quizzes
+## 🚀 Features
+- Smart Study Plan Generator<br>
+- Generates a personalized study plan based on syllabus and exam dates<br>
+- Auto-updates progress when tasks are completed<br>
+- PDF Knowledge Base (RAG)<br>
+- Upload PDFs and convert them into embeddings<br>
+- Pinecone vector search provides accurate, context-aware answers<br>
+- AI Voice Tutor (Agora + GPT)<br>
+- Real-time voice tutoring<br>
+- Interactive concept explanations<br>
+- Low latency using Agora<br>
+- Adaptive Quiz Generator<br>
+- Automatically generates MCQs and short questions<br>
+- Adjusts difficulty dynamically<br>
+- Gamification<br>
+- XP, streaks, badges<br>
+- Weekly and monthly progress analytics<br>
+- Real-Time Sync<br>
+- WebSockets for instant updates for tasks, progress, XP, quizzes
 
 🏗️ Tech Stack
 Frontend
