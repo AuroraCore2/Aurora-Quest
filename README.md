@@ -3,8 +3,7 @@
 An intelligent study companion that helps students plan, learn, and revise efficiently using AI, RAG search, voice tutoring, adaptive quizzes, and real-time progress tracking.
 Built with FastAPI, Next.js, Agora RTC, OpenAI, and Pinecone.
 
-<img width="1912" height="930" alt="image" src="https://github.com/user-attachments/assets/128ce0a2-6d06-4943-adf5-a2544c4625c7" />
-
+<img width="1834" height="911" alt="image" src="https://github.com/user-attachments/assets/3e546fb2-dc8f-4b19-869f-52fd89f17f25" />
 
 
 ### 🚀 Features
