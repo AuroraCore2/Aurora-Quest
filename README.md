@@ -1,3 +1,8 @@
+### Team Members-
+- Asiya Arif<br>
+- Anjali Singh<br>
+- Akansha Kambley<br>
+
 ## 📚 AI-Powered Study Planner
 
 An intelligent study companion that helps students plan, learn, and revise efficiently using AI, RAG search, voice tutoring, adaptive quizzes, and real-time progress tracking.
